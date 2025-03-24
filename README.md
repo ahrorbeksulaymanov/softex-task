@@ -18,7 +18,7 @@ Loyihani ishga tushirish uchun quyidagi amallarni bajaring:
 
 ```sh
 # Repositoryni klonlash
-git clone https://github.com/softex-task/admin-dashboard.git
+git clone https://github.com/ahrorbeksulaymanov/softex-task.git
 
 # Loyihaga o‘tish
 cd admin-dashboard
