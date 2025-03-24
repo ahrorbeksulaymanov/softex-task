@@ -1,54 +1,84 @@
-# React + TypeScript + Vite
+# Admin Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Admin Dashboard - bu **React + TypeScript** yordamida yaratilgan **administrator paneli** bo‘lib, **Ant Design** va **Tailwind CSS** orqali UI interfeys ishlab chiqilgan.
 
-Currently, two official plugins are available:
+## 📌 Texnologiyalar
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Loyiha quyidagi texnologiyalar asosida qurilgan:
+- **React (TypeScript)** – UI yaratish uchun
+- **React Router Dom** – Sahifalar orasida navigatsiya qilish
+- **Ant Design** – UI komponentlar
+- **Tailwind CSS** – UI dizayn
+- **React Query** – Ma'lumotlarni fetch qilish
+- **Axios** – API uchun
 
-## Expanding the ESLint configuration
+## 🚀 O‘rnatish
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Loyihani ishga tushirish uchun quyidagi amallarni bajaring:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```sh
+# Repositoryni klonlash
+git clone https://github.com/softex-task/admin-dashboard.git
+
+# Loyihaga o‘tish
+cd admin-dashboard
+
+# Paketlarni o‘rnatish
+npm install   # yoki yarn install
+
+# Lokal serverni ishga tushirish
+npm run dev   # yoki yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📂 Loyihaning Strukturasi
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
 ```
+admin-dashboard/
+│-- src/
+│   │-- assets/          # Rasmlar va statik fayllar
+│   │-- components/      # UI komponentlari
+│   │-- hooks/          # Custom hooklar (usePagination, useDebounce, useFetch)
+│   │-- layouts/        # Layoutlar (Sidebar, Header, Content)
+│   │-- pages/         # Dashboard sahifalari
+│   │-- routes/        # Routing konfiguratsiya
+│   │-- services/      # API chaqiriqlar
+│   │-- utils/         # Yordamchi funksiyalar
+│   │-- App.tsx        # Asosiy App componenti
+│   │-- main.tsx       # React ilovasini render qilish
+│-- public/            # Static fayllar
+│-- package.json       # NPM paketlar
+│-- README.md          # Loyihaning hujjatlari
+```
+
+## 🌐 API Endpointlar
+
+| Endpoint | Tavsif |
+|----------|--------|
+| `/api/users` | Foydalanuvchilar ro'yxati |
+| `/api/orders` | Buyurtmalar ma'lumotlari |
+| `/api/statistics` | Umumiy statistik ma'lumotlar |
+
+## 🎨 UI Ko‘rinishlari
+
+**1️⃣ Login Page**
+- Ant Design `Form`, `Input.Password`
+- Axios orqali autentifikatsiya
+
+**2️⃣ Dashboard**
+- Statistik ma’lumotlar grafiklar bilan
+- API orqali dinamik ma’lumotlarni olish
+
+**3️⃣ Sidebar va Navigatsiya**
+- **Ant Design `Menu`** orqali sidebar
+- **Active state** bilan menyu tanlash
+
+## 📜 Lisensiya
+
+Bu loyiha **MIT** lisensiyasi asosida taqdim etilgan.
+
+---
+
+📧 **Aloqa**: Agar savollaringiz bo‘lsa, GitHub Issues yoki email orqali bog‘lanishingiz mumkin.
+
+🚀 **Admin Dashboard** loyihangizga omad! 🎯
+
