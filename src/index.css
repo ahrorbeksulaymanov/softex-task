@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme {
+  --color-primary: #3178C6;
+  --color-primary-hover: #3191c6;
+  --color-tx-primary: #475467;
+  --color-light-border: #D0D5DD;
+}
+
+.sidebar-item {
+  @apply flex gap-3 py-[11px] px-[15px] rounded-[6px] font-normal text-tx-primary transition hover:text-tx-primary hover:bg-[#F9FAFB];
+}
+
+.active-menu{
+  @apply !text-white bg-primary hover:bg-primary-hover
+}
+.sidebar-item svg path{
+  @apply stroke-tx-primary
+}
+
+.active-menu svg path{
+  @apply stroke-white
+}
+
+.my-table-wrapper{
+  box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px 0px rgba(16, 24, 40, 0.06);
+  border: 1px solid #EAECF0;
+  border-radius: 4px;
+}
+
+.custom-pagination-wrapper .ant-pagination li{
+  border: 1px solid #D0D5DD;
+  margin: 0;
+  border-radius: 0;
+  padding: 10px;
+  font-size: 14px;
+  height: 40px;
+  line-height: 130%;
+}
+
+.custom-pagination-wrapper .ant-pagination li:hover{
+  background-color: #F9FAFB;
+}
+
+.custom-pagination-wrapper .ant-pagination .ant-pagination-item-active{
+  background-color: #F2F4F7;
+  color: #1D2939;
+}
+
+.custom-pagination-wrapper .ant-pagination li:first-child {
+  border-radius: 6px 0 0 6px;
+  padding: 10px 16px;
+  line-height: 100%;
+}
+
+.custom-pagination-wrapper .ant-pagination li:last-child {
+  border-radius: 0 6px 6px 0;
+  padding: 10px 16px;
+  line-height: 100%;
+}
+
+.custom-pagination-wrapper .ant-pagination .ant-pagination-jump-next-custom-icon, 
+.custom-pagination-wrapper .ant-pagination .ant-pagination-jump-prev-custom-icon
+{
+  padding: 10px 0px;
+  width: 40px;
+}
+
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+}
+
+*{
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
